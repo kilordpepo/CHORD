@@ -49,6 +49,7 @@ public class ConexionUtils {
                 reves = new Socket (dato.getDestino().getDireccion(),dato.getDestino().getPuertopeticion());
             salidaObjeto = new ObjectOutputStream(reves.getOutputStream());
             //El cliente manda:
+            System.out.println("Funcion: "+dato.getFuncion()+" Tiempo de envio: "+SistemaUtil.obtenerHora());
             salidaObjeto.writeObject(dato);
             //El cliente recibe:
             ObjectInputStream ois = new ObjectInputStream(reves.getInputStream());
