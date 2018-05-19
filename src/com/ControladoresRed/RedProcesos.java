@@ -99,8 +99,8 @@ public class RedProcesos extends Thread {
                     HashMap<Integer, NodoRF>  tabla = new HashMap<Integer, NodoRF>();
                 int valorFinger;
                 for (NodoRF nodo : anillo) {
+                    int indice = 1;
                     for (int i = 1; i <= 5; i++) {
-                        int indice = 1;
                         valorFinger = nodo.getHash().intValue() + ((int) Math.pow(2, i - 1));
                         for (NodoRF aux : anillo) {
                             if (aux.getHash().intValue() >= valorFinger) {

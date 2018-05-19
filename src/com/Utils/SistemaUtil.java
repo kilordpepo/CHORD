@@ -12,10 +12,11 @@ public class SistemaUtil {
 
     public static String obtenerHora(){
         Calendar calendario = Calendar.getInstance();
-        int hora, minutos, segundos;
+        int hora, minutos, segundos,milisegundos;
         hora =calendario.get(Calendar.HOUR_OF_DAY);
         minutos = calendario.get(Calendar.MINUTE);
         segundos = calendario.get(Calendar.SECOND);
-        return hora + ":" + minutos + ":" + segundos;
+        milisegundos = calendario.get(Calendar.MILLISECOND);
+        return hora + ":" + minutos + ":" + segundos + ":" + milisegundos;
     }
 }
