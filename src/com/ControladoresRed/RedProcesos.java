@@ -101,7 +101,7 @@ public class RedProcesos extends Thread {
                 for (NodoRF nodo : anillo) {
                     int indice = 1;
                     for (int i = 1; i <= 5; i++) {
-                        valorFinger = nodo.getHash().intValue() + ((int) Math.pow(2, i - 1));
+                        valorFinger = Nodo.getInstancia().getHash().intValue() + ((int) Math.pow(2, i - 1));
                         for (NodoRF aux : anillo) {
                             if (aux.getHash().intValue() >= valorFinger) {
                                 tabla.put(indice, aux);
